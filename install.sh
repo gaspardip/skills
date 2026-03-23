@@ -11,6 +11,18 @@ npx skills add "$REPO@rubric" -g -y
 npx skills add "$REPO@assess" -g -y
 npx skills add "$REPO@deferred" -g -y
 
+echo "installing commands..."
+mkdir -p "$CLAUDE_DIR/commands"
+for f in "$SCRIPT_DIR"/commands/*.md; do
+  name=$(basename "$f")
+  if [ -f "$CLAUDE_DIR/commands/$name" ]; then
+    echo "  skip $name (already exists)"
+  else
+    cp "$f" "$CLAUDE_DIR/commands/$name"
+    echo "  added $name"
+  fi
+done
+
 echo "installing hookify rules..."
 for f in "$SCRIPT_DIR"/hooks/*.local.md; do
   name=$(basename "$f")
