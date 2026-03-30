@@ -8,12 +8,14 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 
 echo "installing skills..."
 npx skills add "$REPO@rubric" -g -y
+npx skills add "$REPO@rubric2" -g -y
 npx skills add "$REPO@assess" -g -y
 npx skills add "$REPO@deferred" -g -y
+npx skills add "$REPO@writer" -g -y
 
 echo "installing commands..."
 mkdir -p "$CLAUDE_DIR/commands"
-for f in "$SCRIPT_DIR"/commands/*.md; do
+for f in "$SCRIPT_DIR"/commands/*; do
   name=$(basename "$f")
   if [ -f "$CLAUDE_DIR/commands/$name" ]; then
     echo "  skip $name (already exists)"
