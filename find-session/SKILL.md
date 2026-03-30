@@ -1,3 +1,8 @@
+---
+name: find-session
+description: Find a Claude Code session matching a natural language description. Use when the user types /find-session, asks to "find a session", "search sessions", or wants to resume a past conversation.
+---
+
 Find a Claude Code session matching a natural language description.
 
 usage: `/find-session <description>` — pass `--all` to search across all projects

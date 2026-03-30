@@ -1,3 +1,8 @@
+---
+name: address
+description: Address unresolved review comments on a pull request. Use when the user types /address, asks to "address PR comments", "handle review feedback", or wants to resolve PR threads.
+---
+
 Address unresolved review comments on a pull request.
 
 usage: `/address [PR_NUMBER]`

@@ -1,4 +1,9 @@
-add a new LLM-ism pattern to the PR comment style hook.
+---
+name: update-pr-style-hook
+description: Add a new LLM-ism pattern to the PR comment style hook. Use when the user types /update-pr-style-hook, spots a new LLM phrase that should be blocked, or wants to expand the PR comment style filter.
+---
+
+Add a new LLM-ism pattern to the PR comment style hook.
 
 usage: `/update-pr-style-hook <offending phrase or pattern>`
 
